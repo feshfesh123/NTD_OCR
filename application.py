@@ -21,7 +21,7 @@ model = CRNN_model(CRNN_MODE.inference)
 model.load_weights(FilePaths.fnSave)
 
 # app
-app = Flask(__name__)
+myapp = Flask(__name__)
 
 # routes
 @app.route('/', methods=['POST'])
@@ -79,4 +79,4 @@ def predict():
     return json.dumps(output, ensure_ascii=False).encode('utf8')
 
 if __name__ == '__main__':
-    app.run(port = 5000, debug=True)
+    myapp.run(port = 5000, debug=True)
