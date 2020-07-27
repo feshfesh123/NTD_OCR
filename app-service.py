@@ -15,7 +15,7 @@ import json
 #model = pickle.load(open('model.pkl','rb'))
 
 
-FilePaths.fnSave = '../model/crnn_160ts.h5'
+FilePaths.fnSave = 'crnn_160ts.h5'
 
 model = CRNN_model(CRNN_MODE.inference)
 model.load_weights(FilePaths.fnSave)
